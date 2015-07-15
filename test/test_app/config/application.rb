@@ -9,13 +9,13 @@ require 'inheritable_fixtures'
 
 module TestEngine3
   class Engine < Rails::Engine
-    config.paths['lib/test/fixtures'] = File.expand_path("../../../fixtures3", __FILE__)
+    config.fixtures_paths.unshift(File.expand_path("../../../fixtures3", __FILE__))
   end
 end
 
 module TestEngine2
   class Engine < Rails::Engine
-    config.paths['lib/test/fixtures'] = File.expand_path("../../../fixtures2", __FILE__)
+    config.fixtures_paths.unshift(File.expand_path("../../../fixtures2", __FILE__))
   end
 end
 
