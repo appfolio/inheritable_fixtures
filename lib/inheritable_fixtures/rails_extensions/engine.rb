@@ -4,7 +4,8 @@ module InheritableFixtures
       def self.included(target)
         target.class_eval do
           initializer :append_fixtures_paths, group: :all do |app|
-            app.config.fixtures_paths.unshift(*paths["lib/test/fixtures"].existent_directories)
+            fixtures_path = root.join('lib', name.underscore, 'test', 'fixtures').to_s
+            app.config.fixtures_paths.unshift(fixtures_path) if File.exists?(fixtures_path)
           end
         end
       end
