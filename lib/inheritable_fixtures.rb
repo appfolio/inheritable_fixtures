@@ -6,6 +6,7 @@ module InheritableFixtures
 end
 
 require 'inheritable_fixtures/rails_extensions/engine'
+require 'inheritable_fixtures/rails_extensions/engine_configuration'
 require 'inheritable_fixtures/rails_extensions/test_fixtures'
 require 'inheritable_fixtures/rails_extensions/test_process'
 require 'inheritable_fixtures/engine'
@@ -30,4 +31,4 @@ module ActionDispatch
 end
 
 Rails::Engine.include(::InheritableFixtures::RailsExtensions::Engine)
-
+Rails::Engine::Configuration.prepend(::InheritableFixtures::RailsExtensions::EngineConfiguration)

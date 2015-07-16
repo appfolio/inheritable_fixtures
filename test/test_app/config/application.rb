@@ -6,18 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 require 'inheritable_fixtures'
-
-module TestEngine3
-  class Engine < Rails::Engine
-    config.root = File.expand_path("../../../test_engine3", __FILE__)
-  end
-end
-
-module TestEngine2
-  class Engine < Rails::Engine
-    config.root = File.expand_path("../../../test_engine2", __FILE__)
-  end
-end
+require_relative '../../test_engine3/lib/test_engine3'
+require_relative '../../test_engine2/lib/test_engine2'
 
 module TestApp
   class Application < Rails::Application
