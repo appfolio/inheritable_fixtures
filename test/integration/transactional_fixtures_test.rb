@@ -1,4 +1,4 @@
-require 'integration_helper'
+require 'test_helper'
 
 class TransactionalFixturesTest < ActiveSupport::TestCase
   self.use_transactional_fixtures = true

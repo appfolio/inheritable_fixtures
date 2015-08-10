@@ -1,4 +1,4 @@
-require 'integration_helper'
+require 'test_helper'
 
 class NonTransactionalFixturesTest < ActiveSupport::TestCase
   self.use_transactional_fixtures = false
