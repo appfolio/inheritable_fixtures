@@ -1,9 +1,9 @@
 require 'generators/generator_test_helper'
-require 'generators/inheritable_fixtures/model/model_generator'
+require 'generators/test_unit/model/model_generator'
 
 class ModelGeneratorTest < Rails::Generators::TestCase
   include GeneratorsTestHelper
-  tests InheritableFixtures::ModelGenerator
+  tests TestUnit::Generators::ModelGenerator
 
   def test_fixtures_path__app_context
     capture(:stdout) do
