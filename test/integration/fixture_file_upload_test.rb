@@ -1,4 +1,4 @@
-require 'integration_helper'
+require 'test_helper'
 require 'open3'
 
 class FixtureFileUploadTest < ActionController::TestCase
