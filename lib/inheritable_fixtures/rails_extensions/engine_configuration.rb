@@ -9,5 +9,3 @@ module InheritableFixtures
     end
   end
 end
-
-
