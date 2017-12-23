@@ -10,3 +10,5 @@ gemfile:
   - gemfiles/rails41.gemfile
   - gemfiles/rails42.gemfile
   - gemfiles/rails4252.gemfile
+  - gemfiles/rails4271.gemfile
+  - gemfiles/rails506.gemfile

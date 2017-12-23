@@ -10,4 +10,10 @@ end
 appraise "rails4252" do
   gem "rails",    '4.2.5.2'
 end
+appraise "rails4271" do
+  gem "rails",    '4.2.7.1'
+end
+appraise "rails506" do
+  gem "rails",    '5.0.6'
+end
 
