@@ -8,9 +8,9 @@ module InheritableFixtures
           # paths.add('lib/fixtures')
           #
           # and remove EngineConfiguration
-          
+
           initializer :append_fixtures_paths, group: :all do |app|
-            app.config.fixtures_paths.unshift(*paths["lib/fixtures"].existent_directories)
+            app.config.fixtures_paths.unshift(*paths['lib/fixtures'].existent_directories)
           end
         end
       end
