@@ -2,7 +2,7 @@ require 'test_helper'
 require 'open3'
 
 class DbFixtureLoadTest < ActiveSupport::TestCase
-  self.use_transactional_fixtures = false
+  self.use_transactional_tests = false
 
   setup :clear_database
 

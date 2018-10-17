@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class NonTransactionalFixturesTest < ActiveSupport::TestCase
-  self.use_transactional_fixtures = false
+  self.use_transactional_tests = false
   fixtures :all
   
   teardown :dirty_database
