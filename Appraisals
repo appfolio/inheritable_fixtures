@@ -4,6 +4,10 @@ if RUBY_VERSION == '2.2.2' || RUBY_VERSION == '2.3.3'
   end
 
   appraise 'rails521' do
-      gem 'rails',    '5.2.1'
-    end
+    gem 'rails',    '5.2.1'
+  end
+
+  appraise 'rails522' do
+    gem 'rails',    '5.2.2'
+  end
 end
