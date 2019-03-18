@@ -6,3 +6,4 @@ script:
 gemfile:
   - gemfiles/rails506.gemfile
   - gemfiles/rails521.gemfile
+  - gemfiles/rails522.gemfile
