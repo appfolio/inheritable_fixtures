@@ -1,4 +1,4 @@
-if RUBY_VERSION == '2.2.2' || RUBY_VERSION == '2.3.3'
+if ['2.2.2', '2.3.3', '2.6.3'].include?(RUBY_VERSION)
   appraise 'rails506' do
     gem 'rails',    '5.0.6'
   end
