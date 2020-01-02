@@ -47,7 +47,8 @@ class DbFixtureLoadTest < ActiveSupport::TestCase
     assert_equal 0, State.all.size
     assert_equal 0, Country.all.size
     
-    stdout, stderr, status = rake_db_fixtures_load('FIXTURES=foobar')
+
+    _, stderr, _ = rake_db_fixtures_load('FIXTURES=foobar')
     assert stderr.include?('Fixtures ["foobar"] not found')
     
     assert_equal 0, City.all.size
