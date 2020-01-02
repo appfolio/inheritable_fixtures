@@ -21,8 +21,8 @@ class ModelGeneratorTest < Rails::Generators::TestCase
         system('rails g model Account name:string age:integer')
       end
 
-      assert File.exists?('lib/fixtures/accounts.yml')
-      assert !File.exists?('test/fixtures/accounts.yml')
+      assert File.exist?('lib/fixtures/accounts.yml')
+      assert !File.exist?('test/fixtures/accounts.yml')
     end
   ensure
     in_test_engine_dir do
