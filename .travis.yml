@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.6.3
+  - 2.7.5
 script:
   - RAILS_ENV=test bundle exec rake --trace db:create db:migrate test
 gemfile:
@@ -8,3 +8,4 @@ gemfile:
   - gemfiles/rails521.gemfile
   - gemfiles/rails522.gemfile
   - gemfiles/rails6.gemfile
+  - gemfiles/rails7.gemfile
