@@ -1,20 +1,14 @@
-if ['2.2.2', '2.3.3', '2.6.3'].include?(RUBY_VERSION)
-  appraise 'rails506' do
-    gem 'rails', '5.0.6'
-    gem 'sqlite3', '~> 1.3.6'
-  end
-
-  appraise 'rails521' do
-    gem 'rails', '5.2.1'
-    gem 'sqlite3', '~> 1.3.6'
-  end
-
-  appraise 'rails522' do
-    gem 'rails', '5.2.2'
-    gem 'sqlite3', '~> 1.3.6'
-  end
-
+case RUBY_VERSION
+when '3.0.7', '3.1.5', '3.2.4', '3.3.1'
   appraise 'rails6' do
     gem 'rails', '~> 6.0'
   end
+  appraise 'rails7_0' do
+    gem 'rails', '~> 7.0.0'
+  end
+  appraise 'rails7_1' do
+    gem 'rails', '~> 7.1.0'
+  end
+else
+  raise "Unsupported Ruby version #{RUBY_VERSION}"
 end
