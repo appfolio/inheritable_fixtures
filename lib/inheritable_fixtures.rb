@@ -13,6 +13,7 @@ require 'inheritable_fixtures/engine'
 
 require 'rails/engine'
 require 'rails/engine/configuration'
+require 'active_record'
 require 'active_record/fixtures'
 require 'action_dispatch/testing/test_process'
 

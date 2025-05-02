@@ -3,7 +3,7 @@ require 'test_helper'
 class TransactionalFixturesTest < ActiveSupport::TestCase
   self.use_transactional_tests = true
   fixtures :all
-  
+
   teardown :dirty_database
 
   def test_fixtures_in_normal_fixture_path
@@ -24,13 +24,11 @@ class TransactionalFixturesTest < ActiveSupport::TestCase
   end
 
   private
-  
+
   def dirty_database
-    # write to the database to ensure these objects do not leak into 
-    # the next test
+    # write to the database to ensure these objects do not leak into the next test
     City.create!(:name => 'Dirty')
     State.create!(:name => 'Dirty')
     Country.create!(:name => 'Dirty')
   end
-
 end
