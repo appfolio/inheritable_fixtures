@@ -1,15 +1,24 @@
-require 'rubygems'
-require 'bundler/setup'
+# frozen_string_literal: true
 
-require 'rake/testtask'
-require 'bundler/gem_tasks'
+require 'bundler'
 
-APP_RAKEFILE = File.expand_path("../test/test_app/Rakefile", __FILE__)
-load 'rails/tasks/engine.rake'
+require 'logger' # Due to issue with activesupport / concurrent-ruby
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << "test"
-  t.pattern = 'test/**/*_test.rb'
+begin
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  warn e.message
+  warn 'Run `bundle install` to install missing gems'
+  exit e.status_code
 end
 
-task :default => :test
+require 'rake/testtask'
+
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'test'
+  test.pattern = 'test/**/*_test.rb'
+  test.verbose = true
+  test.warning = false
+end
+
+task default: :test
