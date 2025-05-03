@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: inheritable_fixtures
+  description: Simplify fixtures for a large Rails application that is split into multiple engines.
+  tags: []
+  annotations:
+    appfolio.com/package-location: https://rubygems.org/gems/inheritable_fixtures
+    appfolio.com/package-type: gem
+    circleci.com/project-slug: github/appfolio/inheritable_fixtures
+  name: inheritable-fixtures
+spec:
+  type: library
+  lifecycle: maintenance
+  owner: engineering
